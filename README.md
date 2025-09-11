@@ -1,2 +1,2 @@
-# laundry-cahaya
-ini pemrog ke 2 saya
+# tugas pemrog aza semester 1
+ini pemrog yang pemula hihi
