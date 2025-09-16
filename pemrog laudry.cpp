@@ -10,17 +10,17 @@ int main(){
     cout << "===Laundry Cahaya===" << endl;
     cout << "Masukan Nama Pemesan: " ;
     getline(cin, namaPemesan);
-    cout << "Masukan Jumlah Kilogram: " ;
+    cout << "Masukan Jumlah Berat Cucian (Kilogram): " ;
     cin >> Kilogram;
-    cout << "Tarif Perkilogram: Rp. ";
+    cout << "Harga Perkilogram: Rp. ";
     cin >> harga;
     
     double total = Kilogram * harga ;
     
     cout << "\n ===Data Laundry Cahaya===" << endl;
     cout << "Nama Pemesan : "<< namaPemesan << endl;
-    cout << "Jumlah Perkilogram : "<< Kilogram << endl;
-    cout << "Tarif Perkilogram: Rp. " << total << endl;
+    cout << "Jumlah Berat Cucian (Perkilogram) : "<< Kilogram << endl;
+    cout << "Harga Perkilogram: Rp. " << total << endl;
     
 
     return 0;
