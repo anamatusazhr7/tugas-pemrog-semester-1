@@ -1,26 +1,30 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main(){
+    //variabel penting
     string namaObat;
-    int stok;
-    double harga;
-    
+    int jumlahStok;
+    double tarif;
+
+    //input dari user
     cout << "===Apotik Cinta===" << endl;
     cout << "Masukan Nama Obat: " ;
     getline(cin, namaObat);
     cout << "Masukan Jumlah Stok: ";
-    cin >> stok;
+    cin >> jumlahStok;
     cout << "Tarif Perobat: Rp. ";
-    cin >> harga;
+    cin >> tarif ;
+
+    //hitung total biaya
+    double total = jumlahStok * tarif ;
     
-    double total = stok * harga ;
-    
+    //tampilan data awal
     cout << "\n ===Data Apotek Cinta===" << endl;
     cout << "Nama Obat : "<< namaObat << endl;
-    cout << "Jumlah Stok : "<< stok << endl;
-    cout << "Tarif Perobat: Rp. " << total << endl;
+    cout << "Jumlah Stok : "<< jumlahStok << endl;
+    cout << "Tarif perobat : "<< tarif << endl;
+    cout << "Total biaya : Rp. " << total << endl;
     
 
     return 0;
