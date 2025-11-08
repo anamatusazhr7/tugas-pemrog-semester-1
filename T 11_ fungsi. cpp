@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+void garis() {
+    cout << "==========================================\n";
+}
+
+void HitungLuasPersegiEmpat(double sisi) {
+    double luas = sisi * sisi;
+    cout << "Masukkan panjang sisi: " << sisi << " cm" << endl;
+    cout << "Luas Persegi Empat adalah: " << luas << " cm²" << endl;
+}
+
+void HitungLuasSegiTiga(double alas, double tinggi) {
+    double luas = 0.5 * alas * tinggi;
+    cout << "Masukkan alas: " << alas << " cm" << endl;
+    cout << "Masukkan tinggi: " << tinggi << " cm" << endl;
+    cout << "Luas Segitiga adalah: " << luas << " cm²" << endl;
+}
+
+void HitungLuasLingkaran(double jarijari) {
+    const double phi = 3.14;
+    double luas = phi * jarijari * jarijari;
+    cout << "Masukkan jari-jari: " << jarijari << " cm" << endl;
+    cout << "Luas Lingkaran adalah: " << luas << " cm²" << endl;
+}
+
+int main() {
+    int menu;
+    do {
+        garis();
+        cout << " MENU PROGRAM HITUNG LUAS BANGUN " << endl;
+        garis();
+        cout << "Pilih bangun datar yang ingin dihitung luasnya: " << endl;
+        cout << "1. Hitung Luas Persegi Empat" << endl;
+        cout << "2. Hitung Luas Segitiga" << endl;
+        cout << "3. Hitung Luas Lingkaran" << endl;
+        cout << "4. Keluar" << endl;
+        garis();
+        cout << "Masukkan pilihan Anda (1-4): ";
+        cin >> menu;
+
+        switch (menu) {
+            case 1: {
+                double sisi;
+                cout << "Masukkan panjang sisi: ";
+                cin >> sisi;
+                HitungLuasPersegiEmpat(sisi);
+                break;
+            }
+            case 2: {
+                double alas, tinggi;
+                cout << "Masukkan alas: ";
+                cin >> alas;
+                cout << "Masukkan tinggi: ";
+                cin >> tinggi;
+                HitungLuasSegiTiga(alas, tinggi);
+                break;
+            }
+            case 3: {
+                double jarijari;
+                cout << "Masukkan jari-jari: ";
+                cin >> jarijari;
+                HitungLuasLingkaran(jarijari);
+                break;
+            }
+            case 4:
+                cout << "Terima kasih telah menggunakan program ini!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
+        }
+        cout << endl;
+    } while (menu != 4);
+
+    return 0;
+}
